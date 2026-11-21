@@ -71,7 +71,7 @@ export function check(ai, caption, court = false) {
   // Tout nom propre (mot à majuscule en milieu de phrase) doit exister dans la légende.
   // Un mot long est reconnu à son radical, pour accepter "Ivoiriens" quand la légende dit "Ivoire".
   const source = flat(`${caption} ${cfg.site_name} afrique`);
-  for (const [, name] of `x ${ai.titre}. ${body}`.matchAll(/[a-zà-ÿ,;:] ([A-ZÀ-Ý][\p{L}'’-]{2,})/gu)) {
+  for (const [, name] of `x ${ai.titre}. ${body}`.matchAll(/[a-zà-ÿ,;] ([A-ZÀ-Ý][\p{L}'’-]{2,})/gu)) {
     const word = flat(name);
     if (!source.includes(word.length >= 7 ? word.slice(0, 5) : word)) return `nom absent de la source (${name})`;
   }
