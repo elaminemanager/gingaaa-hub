@@ -35,7 +35,7 @@ Dans le dépôt GitHub, menu Settings > Secrets and variables > Actions.
 | `SITE_URL` | variable | Adresse du site, par exemple `https://exemple.com` |
 | `YOUTUBE_CHANNEL_ID` | variable | Identifiant de la chaîne YouTube (commence par `UC`) |
 | `IG_ACCESS_TOKEN` | secret | Jeton Instagram généré dans le tableau de bord de l'application Meta (configuration "Unified login" : jeton sans expiration) |
-| `IG_USER_ID` | variable | Identifiant numérique du compte Instagram professionnel, affiché dans le même tableau de bord |
+| `instagram_user_id` | config.json | Identifiant numérique du compte Instagram professionnel, affiché dans le même tableau de bord (ce n'est pas un secret) |
 | `META_PAGE_TOKEN`, `FB_PAGE_ID` | secrets | Facultatif : jeton et identifiant de la Page Facebook, pour relayer aussi Facebook |
 | `TIKTOK_CLIENT_KEY`, `TIKTOK_CLIENT_SECRET`, `TIKTOK_REFRESH_TOKEN` | secrets | Application TikTok validée (Login Kit + Display API, autorisation `video.list`) |
 | `GH_PAT` | secret | Jeton GitHub (droit d'écriture sur les secrets de ce dépôt) qui permet d'enregistrer les jetons Instagram et TikTok quand ils changent |

@@ -54,11 +54,13 @@ const connectors = {
     if (token.startsWith('IG')) {
       res = await getJSON(`https://graph.instagram.com/me/media?fields=${fields}&limit=50&access_token=${token}`);
     } else {
-      if (!env.IG_USER_ID) {
+      // L'identifiant du compte n'est pas un secret : il vient de config.json, ou de IG_USER_ID s'il est défini.
+      const id = env.IG_USER_ID || (env.IG_ACCESS_TOKEN ? cfg.instagram_user_id : '');
+      if (!id) {
         if (!env.IG_ACCESS_TOKEN) return null;
-        throw new Error('identifiant du compte Instagram manquant (IG_USER_ID)');
+        throw new Error('identifiant du compte Instagram manquant (instagram_user_id dans config.json)');
       }
-      res = await getJSON(meta(`${env.IG_USER_ID}/media?fields=${fields}&limit=50&access_token=${token}`));
+      res = await getJSON(meta(`${id}/media?fields=${fields}&limit=50&access_token=${token}`));
     }
     return (res.data || []).map((m) => {
       const first = m.children?.data?.[0];
