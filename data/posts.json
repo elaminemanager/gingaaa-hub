@@ -33,7 +33,8 @@
       ],
       "enriched": "basic",
       "indexable": true,
-      "slug": "la-grosse-surprise-du-vendredi"
+      "slug": "la-grosse-surprise-du-vendredi",
+      "tries": 1
     },
     {
       "id": "instagram_18353330140251119",
@@ -63,7 +64,8 @@
       ],
       "enriched": "basic",
       "indexable": true,
-      "slug": "scene-forte-lors-du-diner-de-gala-des-gq-men-of-the-year-2026-a-paris"
+      "slug": "scene-forte-lors-du-diner-de-gala-des-gq-men-of-the-year-2026-a-paris",
+      "tries": 1
     },
     {
       "id": "instagram_18018501677973114",
@@ -97,7 +99,8 @@
       ],
       "enriched": "basic",
       "indexable": true,
-      "slug": "la-biennale-de-l-art-africain-contemporain-dak-art-ouvre-officiellemen"
+      "slug": "la-biennale-de-l-art-africain-contemporain-dak-art-ouvre-officiellemen",
+      "tries": 1
     },
     {
       "id": "instagram_18133120939911139",
@@ -130,7 +133,8 @@
       ],
       "enriched": "basic",
       "indexable": true,
-      "slug": "barack-obama-et-le-streamer-ishowspeed-ont-cree-l-evenement-sur-instag"
+      "slug": "barack-obama-et-le-streamer-ishowspeed-ont-cree-l-evenement-sur-instag",
+      "tries": 1
     },
     {
       "id": "instagram_17998340535061227",
@@ -162,7 +166,8 @@
       ],
       "enriched": "basic",
       "indexable": true,
-      "slug": "le-president-de-la-fff-philippe-diallo-a-ete-designe-par-l-uefa-pour-b"
+      "slug": "le-president-de-la-fff-philippe-diallo-a-ete-designe-par-l-uefa-pour-b",
+      "tries": 1
     },
     {
       "id": "instagram_18033008519859126",
@@ -195,7 +200,8 @@
       ],
       "enriched": "basic",
       "indexable": true,
-      "slug": "l-evenement-afrobeats-de-la-semaine"
+      "slug": "l-evenement-afrobeats-de-la-semaine",
+      "tries": 1
     },
     {
       "id": "instagram_18084096749543717",
@@ -226,7 +232,8 @@
       ],
       "enriched": "basic",
       "indexable": true,
-      "slug": "beyonce-continue-de-reecrire-l-histoire-de-la-musique-en-devenant-la-p"
+      "slug": "beyonce-continue-de-reecrire-l-histoire-de-la-musique-en-devenant-la-p",
+      "tries": 1
     },
     {
       "id": "instagram_18178015102477256",
@@ -265,7 +272,8 @@
       ],
       "enriched": "basic",
       "indexable": true,
-      "slug": "can-2027-qui-est-dedans-qui-tremble"
+      "slug": "can-2027-qui-est-dedans-qui-tremble",
+      "tries": 1
     },
     {
       "id": "instagram_18080340938446441",
@@ -302,7 +310,8 @@
       ],
       "enriched": "basic",
       "indexable": true,
-      "slug": "tanzanie-0-0-nigeria"
+      "slug": "tanzanie-0-0-nigeria",
+      "tries": 1
     },
     {
       "id": "instagram_18655293469047343",
@@ -338,7 +347,8 @@
       ],
       "enriched": "basic",
       "indexable": false,
-      "slug": "rwanda-0-2-mali"
+      "slug": "rwanda-0-2-mali",
+      "tries": 1
     },
     {
       "id": "instagram_18099447800649150",
@@ -375,7 +385,8 @@
       ],
       "enriched": "basic",
       "indexable": true,
-      "slug": "gambie-2-2-cote-d-ivoire"
+      "slug": "gambie-2-2-cote-d-ivoire",
+      "tries": 1
     },
     {
       "id": "instagram_18119940346956871",
@@ -405,7 +416,8 @@
       ],
       "enriched": "basic",
       "indexable": false,
-      "slug": "quel-artiste-vois-tu-repartir-avec-la-precieuse-statuette-le-7-fevrier"
+      "slug": "quel-artiste-vois-tu-repartir-avec-la-precieuse-statuette-le-7-fevrier",
+      "tries": 1
     },
     {
       "id": "instagram_18405948886160914",
@@ -433,7 +445,8 @@
       "keywords": [],
       "enriched": "basic",
       "indexable": false,
-      "slug": "c-est-officiel-le-nouveau-007-est-connu"
+      "slug": "c-est-officiel-le-nouveau-007-est-connu",
+      "tries": 1
     },
     {
       "id": "instagram_18199927816388451",
@@ -466,7 +479,8 @@
       ],
       "enriched": "basic",
       "indexable": false,
-      "slug": "le-cinema-senegalais-a-l-honneur"
+      "slug": "le-cinema-senegalais-a-l-honneur",
+      "tries": 1
     },
     {
       "id": "instagram_18105556580568291",
@@ -498,7 +512,8 @@
       ],
       "enriched": "basic",
       "indexable": false,
-      "slug": "du-micro-aux-plateaux-de-cinema"
+      "slug": "du-micro-aux-plateaux-de-cinema",
+      "tries": 1
     },
     {
       "id": "instagram_17930169621445492",
@@ -530,7 +545,8 @@
       ],
       "enriched": "basic",
       "indexable": false,
-      "slug": "l-histoire-d-un-pionnier-eternel"
+      "slug": "l-histoire-d-un-pionnier-eternel",
+      "tries": 1
     },
     {
       "id": "instagram_18097337990405277",
@@ -562,7 +578,8 @@
       ],
       "enriched": "basic",
       "indexable": false,
-      "slug": "as-tu-croise-l-etudiant-noir-sur-un-site-de-competition-ou-suivi-ses-v"
+      "slug": "as-tu-croise-l-etudiant-noir-sur-un-site-de-competition-ou-suivi-ses-v",
+      "tries": 1
     },
     {
       "id": "instagram_18103435367644586",
@@ -601,7 +618,8 @@
       ],
       "enriched": "basic",
       "indexable": true,
-      "slug": "dakar-2026-a-travers-les-yeux-de-layepro"
+      "slug": "dakar-2026-a-travers-les-yeux-de-layepro",
+      "tries": 1
     },
     {
       "id": "instagram_18290665492289394",
@@ -629,7 +647,8 @@
       "keywords": [],
       "enriched": "basic",
       "indexable": false,
-      "slug": "le-beau-message-du-president-diomaye-faye-pour-annoncer-la-fin-des-joj"
+      "slug": "le-beau-message-du-president-diomaye-faye-pour-annoncer-la-fin-des-joj",
+      "tries": 1
     },
     {
       "id": "instagram_17956682520322192",
@@ -720,7 +739,8 @@
       ],
       "enriched": "basic",
       "indexable": true,
-      "slug": "ils-ont-tue-ma-mere"
+      "slug": "ils-ont-tue-ma-mere",
+      "tries": 1
     },
     {
       "id": "instagram_18181478950435730",
@@ -755,7 +775,8 @@
       ],
       "enriched": "basic",
       "indexable": true,
-      "slug": "le-club-des-milliardaires-de-la-musique-s-agrandit"
+      "slug": "le-club-des-milliardaires-de-la-musique-s-agrandit",
+      "tries": 1
     },
     {
       "id": "instagram_17880092652633226",
@@ -783,7 +804,8 @@
       "keywords": [],
       "enriched": "basic",
       "indexable": false,
-      "slug": "de-ses-looks-iconiques-sur-les-podiums-parisiens-a-ses-campagnes-inter"
+      "slug": "de-ses-looks-iconiques-sur-les-podiums-parisiens-a-ses-campagnes-inter",
+      "tries": 1
     },
     {
       "id": "instagram_18085634918652024",
@@ -851,7 +873,8 @@
       ],
       "enriched": "basic",
       "indexable": true,
-      "slug": "les-elephants-ont-tremble-mais-ils-ont-tenu"
+      "slug": "les-elephants-ont-tremble-mais-ils-ont-tenu",
+      "tries": 1
     },
     {
       "id": "instagram_18101560028556454",
@@ -886,7 +909,8 @@
       ],
       "enriched": "basic",
       "indexable": true,
-      "slug": "sans-baleba-sans-namaso-mais-avec-le-resultat"
+      "slug": "sans-baleba-sans-namaso-mais-avec-le-resultat",
+      "tries": 1
     },
     {
       "id": "instagram_18126304420930057",
@@ -921,7 +945,8 @@
       ],
       "enriched": "basic",
       "indexable": true,
-      "slug": "premiere-de-vieira-a-dakar-et-les-lions-ont-repondu-present"
+      "slug": "premiere-de-vieira-a-dakar-et-les-lions-ont-repondu-present",
+      "tries": 1
     },
     {
       "id": "instagram_18098091353668681",
@@ -958,7 +983,8 @@
       ],
       "enriched": "basic",
       "indexable": true,
-      "slug": "dix-de-suite-et-wemby-n-a-toujours-pas-l-air-fatigue"
+      "slug": "dix-de-suite-et-wemby-n-a-toujours-pas-l-air-fatigue",
+      "tries": 1
     },
     {
       "id": "instagram_17905787106604501",
@@ -986,7 +1012,8 @@
       "keywords": [],
       "enriched": "basic",
       "indexable": false,
-      "slug": "match-senegal-soudan-remporte-par-le-senegal-avec-4buts-a-1"
+      "slug": "match-senegal-soudan-remporte-par-le-senegal-avec-4buts-a-1",
+      "tries": 1
     },
     {
       "id": "instagram_18160327489519832",
@@ -1014,7 +1041,8 @@
       "keywords": [],
       "enriched": "basic",
       "indexable": false,
-      "slug": "le-senegal-a-reussi-son-retour-dans-le-stade-mythique-de-dakar"
+      "slug": "le-senegal-a-reussi-son-retour-dans-le-stade-mythique-de-dakar",
+      "tries": 1
     },
     {
       "id": "instagram_18162563326504819",
@@ -1042,7 +1070,8 @@
       "keywords": [],
       "enriched": "basic",
       "indexable": false,
-      "slug": "le-senegal-continue-sa-marche-vers-la-qualification-a-la-can-2027-avec"
+      "slug": "le-senegal-continue-sa-marche-vers-la-qualification-a-la-can-2027-avec",
+      "tries": 1
     },
     {
       "id": "instagram_18156020749531105",
@@ -1070,7 +1099,8 @@
       "keywords": [],
       "enriched": "basic",
       "indexable": false,
-      "slug": "notre-star-intergalctique-preferee-ayra-starr-est-officiellement-confi"
+      "slug": "notre-star-intergalctique-preferee-ayra-starr-est-officiellement-confi",
+      "tries": 1
     },
     {
       "id": "instagram_18138658159735011",
@@ -1101,7 +1131,8 @@
       ],
       "enriched": "basic",
       "indexable": false,
-      "slug": "marie-sarr-s-est-impose-dans-la-categorie-des-55kg-femmes-en-battant-l"
+      "slug": "marie-sarr-s-est-impose-dans-la-categorie-des-55kg-femmes-en-battant-l",
+      "tries": 1
     },
     {
       "id": "instagram_18117950015518980",
@@ -1140,7 +1171,8 @@
       ],
       "enriched": "basic",
       "indexable": true,
-      "slug": "l-afrique-n-est-pas-venue-faire-de-la-figuration"
+      "slug": "l-afrique-n-est-pas-venue-faire-de-la-figuration",
+      "tries": 1
     },
     {
       "id": "instagram_18029384765860789",
@@ -1170,7 +1202,8 @@
       ],
       "enriched": "basic",
       "indexable": false,
-      "slug": "une-fois-de-plus-le-senegal-se-rapproche-d-une-medaille-au-joj"
+      "slug": "une-fois-de-plus-le-senegal-se-rapproche-d-une-medaille-au-joj",
+      "tries": 1
     },
     {
       "id": "instagram_18004677554803654",
@@ -1259,7 +1292,8 @@
       ],
       "enriched": "basic",
       "indexable": false,
-      "slug": "des-podiums-historiques-une-fierte-nationale-et-une-jeunesse-qui-prend"
+      "slug": "des-podiums-historiques-une-fierte-nationale-et-une-jeunesse-qui-prend",
+      "tries": 1
     },
     {
       "id": "instagram_18135878692798243",
@@ -1291,7 +1325,8 @@
       ],
       "enriched": "basic",
       "indexable": false,
-      "slug": "le-senegal-remporte-la-medaille-d-or-au-basket-3x3-masculin-face-a-la"
+      "slug": "le-senegal-remporte-la-medaille-d-or-au-basket-3x3-masculin-face-a-la",
+      "tries": 1
     },
     {
       "id": "instagram_18115277321077772",
@@ -1380,7 +1415,8 @@
       ],
       "enriched": "basic",
       "indexable": false,
-      "slug": "l-equipe-feminine-senegalaise-remporte-la-medaille-au-basket-3x3-au-sc"
+      "slug": "l-equipe-feminine-senegalaise-remporte-la-medaille-au-basket-3x3-au-sc",
+      "tries": 1
     },
     {
       "id": "instagram_17967520596227630",
@@ -1408,7 +1444,8 @@
       "keywords": [],
       "enriched": "basic",
       "indexable": false,
-      "slug": "le-senegal-se-qualifie-en-finale-face-a-l-allemagne-au-basket-3x3-masc"
+      "slug": "le-senegal-se-qualifie-en-finale-face-a-l-allemagne-au-basket-3x3-masc",
+      "tries": 1
     },
     {
       "id": "instagram_18078312029769058",
@@ -1440,7 +1477,8 @@
       ],
       "enriched": "basic",
       "indexable": false,
-      "slug": "19-medailles-pour-les-africains-ce-weekend-aux-jo-de-la-jeunesse"
+      "slug": "19-medailles-pour-les-africains-ce-weekend-aux-jo-de-la-jeunesse",
+      "tries": 1
     },
     {
       "id": "instagram_18128457397662117",
@@ -1499,7 +1537,8 @@
       "keywords": [],
       "enriched": "basic",
       "indexable": false,
-      "slug": "2-medailles-d-or-pour-le-senegal-grace-a-la-lutte"
+      "slug": "2-medailles-d-or-pour-le-senegal-grace-a-la-lutte",
+      "tries": 1
     },
     {
       "id": "instagram_17893991427684089",
@@ -1531,7 +1570,8 @@
       ],
       "enriched": "basic",
       "indexable": false,
-      "slug": "le-senegal-remporte-deux-medailles-d-or-a-la-lutte-de-plage"
+      "slug": "le-senegal-remporte-deux-medailles-d-or-a-la-lutte-de-plage",
+      "tries": 1
     },
     {
       "id": "instagram_18201481927379602",
@@ -1563,7 +1603,8 @@
       ],
       "enriched": "basic",
       "indexable": false,
-      "slug": "les-senegalaises-ont-battu-la-france-dans-le-match-de-qualification-du"
+      "slug": "les-senegalaises-ont-battu-la-france-dans-le-match-de-qualification-du",
+      "tries": 1
     },
     {
       "id": "instagram_18000142265829200",
@@ -1591,7 +1632,8 @@
       "keywords": [],
       "enriched": "basic",
       "indexable": false,
-      "slug": "la-lutte-de-plage-a-demarre"
+      "slug": "la-lutte-de-plage-a-demarre",
+      "tries": 1
     }
   ]
 }
