@@ -34,11 +34,10 @@ Dans le dépôt GitHub, menu Settings > Secrets and variables > Actions.
 |---|---|---|
 | `SITE_URL` | variable | Adresse du site, par exemple `https://exemple.com` |
 | `YOUTUBE_CHANNEL_ID` | variable | Identifiant de la chaîne YouTube (commence par `UC`) |
-| `META_PAGE_TOKEN` | secret | Jeton de la Page Facebook, sans expiration |
-| `FB_PAGE_ID` | secret | Identifiant de la Page Facebook |
-| `IG_USER_ID` | secret | Identifiant du compte Instagram professionnel relié à la Page |
+| `IG_ACCESS_TOKEN` | secret | Jeton du compte Instagram professionnel, généré dans le tableau de bord de l'application Meta (valable 60 jours, prolongé chaque semaine par la tâche "Jetons d'accès") |
+| `META_PAGE_TOKEN`, `FB_PAGE_ID` | secrets | Facultatif : jeton et identifiant de la Page Facebook, pour relayer aussi Facebook |
 | `TIKTOK_CLIENT_KEY`, `TIKTOK_CLIENT_SECRET`, `TIKTOK_REFRESH_TOKEN` | secrets | Application TikTok validée (Login Kit + Display API, autorisation `video.list`) |
-| `GH_PAT` | secret | Jeton GitHub permettant de mettre à jour le jeton TikTok quand il change |
+| `GH_PAT` | secret | Jeton GitHub (droit d'écriture sur les secrets de ce dépôt) qui permet d'enregistrer les jetons Instagram et TikTok quand ils changent |
 | `ANTHROPIC_API_KEY` | secret | Clé pour la rédaction par IA. Sans elle, le hub publie la légende telle quelle. |
 
 Un réseau sans accès est simplement ignoré : le hub fonctionne avec ceux qui sont connectés.

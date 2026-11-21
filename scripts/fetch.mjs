@@ -43,12 +43,18 @@ const connectors = {
     }).filter((x) => x.id);
   },
 
-  // Instagram : compte professionnel relié à la Page Facebook, lu avec le jeton de la Page.
+  // Instagram : jeton du compte professionnel (IG_ACCESS_TOKEN, connexion Instagram directe),
+  // ou à défaut jeton de la Page Facebook reliée (META_PAGE_TOKEN + IG_USER_ID).
   async instagram() {
-    const token = env.META_PAGE_TOKEN, id = env.IG_USER_ID;
-    if (!token || !id) return null;
-    const fields = 'id,caption,media_type,media_product_type,media_url,thumbnail_url,permalink,timestamp,children{media_type,media_url,thumbnail_url}';
-    const res = await getJSON(meta(`${id}/media?fields=${encodeURIComponent(fields)}&limit=50&access_token=${token}`));
+    const fields = encodeURIComponent('id,caption,media_type,media_product_type,media_url,thumbnail_url,permalink,timestamp,children{media_type,media_url,thumbnail_url}');
+    let res;
+    if (env.IG_ACCESS_TOKEN) {
+      res = await getJSON(`https://graph.instagram.com/me/media?fields=${fields}&limit=50&access_token=${env.IG_ACCESS_TOKEN}`);
+    } else {
+      const token = env.META_PAGE_TOKEN, id = env.IG_USER_ID;
+      if (!token || !id) return null;
+      res = await getJSON(meta(`${id}/media?fields=${fields}&limit=50&access_token=${token}`));
+    }
     return (res.data || []).map((m) => {
       const first = m.children?.data?.[0];
       const isVideo = m.media_type === 'VIDEO';

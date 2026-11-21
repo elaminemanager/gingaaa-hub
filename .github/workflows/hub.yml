@@ -25,6 +25,7 @@ jobs:
 
       - name: Lire les publications
         env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
@@ -39,7 +40,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           if [ -f .rotated/TIKTOK_REFRESH_TOKEN ] && [ -n "$GH_TOKEN" ]; then
-            gh secret set TIKTOK_REFRESH_TOKEN --body "$(cat .rotated/TIKTOK_REFRESH_TOKEN)"
+            gh secret set TIKTOK_REFRESH_TOKEN --repo "$GITHUB_REPOSITORY" --body "$(cat .rotated/TIKTOK_REFRESH_TOKEN)"
           fi
 
       - name: Rédiger les mini articles
