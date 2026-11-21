@@ -1,0 +1,79 @@
+name: Hub Gingaaa
+
+# Passe toutes les 30 minutes : lit les comptes, rédige les mini articles, régénère le site.
+on:
+  schedule:
+    - cron: '7,37 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hub
+  cancel-in-progress: false
+
+jobs:
+  hub:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Lire les publications
+        env:
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          YOUTUBE_CHANNEL_ID: ${{ vars.YOUTUBE_CHANNEL_ID }}
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
+        run: node scripts/fetch.mjs
+
+      - name: Ranger le nouveau jeton TikTok
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -f .rotated/TIKTOK_REFRESH_TOKEN ] && [ -n "$GH_TOKEN" ]; then
+            gh secret set TIKTOK_REFRESH_TOKEN --body "$(cat .rotated/TIKTOK_REFRESH_TOKEN)"
+          fi
+
+      - name: Rédiger les mini articles
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/enrich.mjs
+
+      - name: Enregistrer les données
+        id: save
+        run: |
+          git config user.name "Hub Gingaaa"
+          git config user.email "hub-gingaaa@users.noreply.github.com"
+          git add data media
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -qm "Hub : mise à jour des publications"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Générer le site
+        if: steps.save.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: node scripts/build.mjs
+
+      - name: Publier sur la branche site
+        if: steps.save.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        run: |
+          cd dist
+          git init -q -b site
+          git config user.name "Hub Gingaaa"
+          git config user.email "hub-gingaaa@users.noreply.github.com"
+          git add -A
+          git commit -qm "Site du $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" site

@@ -1,0 +1,5 @@
+dist/
+.rotated/
+preview.html
+node_modules/
+.env
