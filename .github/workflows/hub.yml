@@ -3,7 +3,7 @@ name: Hub Gingaaa
 # Passe toutes les 30 minutes : lit les comptes, rédige les mini articles, régénère le site.
 on:
   schedule:
-    - cron: '7,37 * * * *'
+    - cron: '9,39 * * * *'
   workflow_dispatch:
 
 permissions:
