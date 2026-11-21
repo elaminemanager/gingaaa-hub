@@ -22,7 +22,7 @@
   "dedup": { "similarity": 0.6, "window_hours": 72 },
   "exclude_hashtags": ["#nohub"],
   "exclude_keywords": ["jeu concours", "jeu-concours", "giveaway", "tirage au sort"],
-  "ai": { "model": "claude-haiku-5-5", "min_words": 90, "max_words": 180 },
+  "ai": { "model": "claude-haiku-5-5", "min_words": 70, "max_words": 170 },
   "rubriques": [
     { "slug": "actus", "name": "Actus", "color": "#E8B84B", "tags": ["actu", "actus", "news", "info", "breaking"] },
     { "slug": "week-end", "name": "On a raté quoi ce week-end ?", "color": "#FF5F1F", "tags": ["weekend", "week-end", "recap", "récap"] },
