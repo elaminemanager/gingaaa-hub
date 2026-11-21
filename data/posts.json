@@ -670,27 +670,28 @@
           "ratio": "4/5"
         }
       ],
-      "title": "Dakar 2026 vue par Layepro : le carrousel photo des JOJ",
-      "summary": "Le photographe Layepro a suivi les JOJ Dakar 2026 pendant deux semaines. Ses plus belles images sont réunies dans un carrousel.",
+      "title": "JOJ Dakar 2026 vus par le photographe Layepro",
+      "summary": "Le photographe Layepro a suivi les JOJ Dakar 2026 pendant deux semaines et en a tiré un carrousel d'images qui montrent ce que les résultats ne disent pas.",
       "body": [
-        "Pendant deux semaines, le photographe Layepro a été partout pendant les JOJ Dakar 2026 : sur le bord des pistes, au-dessus de la corniche, dans les tribunes de Diamniadio. Il a surtout capturé ce que les résultats ne disent pas : la lumière de Ouakam sur le peloton, les visages des bénévoles, les drapeaux au premier plan, et une ville qui regarde ses Jeux passer.",
-        "Gingaaa a réuni ses plus belles images de ces JOJ dans un carrousel à faire défiler à son rythme. Une invitation à prendre son temps, image après image, pour redécouvrir ces Jeux à travers un regard local.",
-        "Gingaaa remercie Layepro d'avoir raconté Dakar comme on l'aime. Le média invite ses lecteurs à suivre son travail et à soutenir les photographes d'ici, qui écrivent la mémoire visuelle du continent. Les lecteurs sont également invités à désigner leur image préférée en commentaire."
+        "Pendant deux semaines, le photographe Layepro a été partout pendant les JOJ Dakar 2026 : sur le bord des pistes, au-dessus de la corniche et dans les tribunes de Diamniadio. Son objectif a capté ce que les résultats ne racontent pas : la lumière de Ouakam sur le peloton, les visages des bénévoles et les drapeaux au premier plan.",
+        "Ses images montrent surtout une ville qui regarde ses Jeux passer. Elles forment un carrousel qui rassemble ses plus belles photos des JOJ, à parcourir à son rythme.",
+        "Layepro a raconté Dakar comme on l'aime, à travers le regard d'un photographe d'ici. Ce carrousel offre une mémoire visuelle de l'événement, loin des classements."
       ],
-      "rubrique": "4-the-culture",
+      "rubrique": "sport",
       "keywords": [
-        "Dakar 2026",
-        "JOJ",
+        "JOJ Dakar 2026",
         "Layepro",
-        "photographie Dakar",
-        "photographes africains"
+        "photographie",
+        "Dakar",
+        "Sénégal"
       ],
       "enriched": "ai",
       "indexable": true,
       "slug": "dakar-2026-a-travers-les-yeux-de-layepro",
-      "tries": 1,
+      "tries": 2,
       "aiv": 2,
-      "aiDone": false
+      "aiDone": true,
+      "short": false
     },
     {
       "id": "instagram_18290665492289394",
@@ -887,20 +888,26 @@
           "ratio": "4/5"
         }
       ],
-      "title": "🥂 De ses looks iconiques sur les podiums parisiens à ses campagnes internationales...",
-      "summary": "🥂 De ses looks iconiques sur les podiums parisiens à ses campagnes internationales pour Chanel, Louis Vuitton et bien d’autres, son année 2",
+      "title": "2026, année historique entre podiums parisiens et campagnes de luxe",
+      "summary": "Des looks iconiques sur les podiums parisiens et des campagnes pour Chanel et Louis Vuitton : une année 2026 historique.",
       "body": [
         "🥂 De ses looks iconiques sur les podiums parisiens à ses campagnes internationales pour Chanel, Louis Vuitton et bien d’autres, son année 2026 est tout simplement historique."
       ],
-      "rubrique": "actus",
-      "keywords": [],
-      "enriched": "basic",
+      "rubrique": "fashion",
+      "keywords": [
+        "mode",
+        "podiums parisiens",
+        "Chanel",
+        "Louis Vuitton",
+        "campagnes publicitaires"
+      ],
+      "enriched": "ai",
       "indexable": false,
       "slug": "de-ses-looks-iconiques-sur-les-podiums-parisiens-a-ses-campagnes-inter",
-      "tries": 1,
-      "thin": true,
+      "tries": 2,
       "aiv": 2,
-      "aiDone": false
+      "aiDone": true,
+      "short": true
     },
     {
       "id": "instagram_18085634918652024",
@@ -1237,7 +1244,7 @@
       "enriched": "basic",
       "indexable": false,
       "slug": "notre-star-intergalctique-preferee-ayra-starr-est-officiellement-confi",
-      "tries": 1,
+      "tries": 2,
       "aiv": 2,
       "aiDone": false
     },
@@ -1731,20 +1738,25 @@
           "ratio": "4/5"
         }
       ],
-      "title": "2 médailles d’or pour le Sénégal grâce à la lutte!",
-      "summary": "2 médailles d’or pour le Sénégal grâce à la lutte! Performance historique !",
+      "title": "Sénégal : deux médailles d'or historiques grâce à la lutte",
+      "summary": "Le Sénégal décroche deux médailles d'or grâce à la lutte, une performance qualifiée d'historique.",
       "body": [
         "2 médailles d’or pour le Sénégal grâce à la lutte!  Performance historique !"
       ],
       "rubrique": "sport",
-      "keywords": [],
-      "enriched": "basic",
+      "keywords": [
+        "Sénégal",
+        "lutte",
+        "médailles d'or",
+        "performance historique"
+      ],
+      "enriched": "ai",
       "indexable": false,
       "slug": "2-medailles-d-or-pour-le-senegal-grace-a-la-lutte",
-      "tries": 1,
-      "thin": true,
+      "tries": 2,
       "aiv": 2,
-      "aiDone": false
+      "aiDone": true,
+      "short": true
     },
     {
       "id": "instagram_17893991427684089",
