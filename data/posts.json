@@ -1,6 +1,83 @@
 {
   "items": [
     {
+      "id": "instagram_18582681937073063",
+      "date": "2026-11-21T14:06:51+0000",
+      "kind": "image",
+      "caption": "🏆 La CAN 2027 a sa carte.\n\nLors de sa 48e Assemblée générale ordinaire, la CAF a dévoilé les six villes qui accueilleront la première Coupe d’Afrique organisée par trois pays :\n\n🇹🇿 Arusha, Dar es Salaam, Zanzibar\n🇺🇬 Hoima, Kampala\n🇰🇪 Nairobi\n\nRendez-vous du 19 juin au 17 juillet 2027 en Afrique de l’Est. Pamoja, ensemble. 🧡\n\nVous iriez dans quelle ville ? Dites-le en commentaire.\n\n#CAN2027 #AFCON2027 #Pamoja #Tanzanie #Ouganda Kenya Gingaaa",
+      "sourceTitle": "",
+      "cover": "media/instagram_18582681937073063.jpg",
+      "sources": [
+        {
+          "network": "instagram",
+          "id": "18582681937073063",
+          "url": "https://www.instagram.com/p/DgAaBIctWe1/",
+          "embed": "https://www.instagram.com/p/DgAaBIctWe1/embed/",
+          "date": "2026-11-21T14:06:51+0000",
+          "ratio": "4/5"
+        }
+      ],
+      "aiv": 2,
+      "tries": 1,
+      "aiDone": true,
+      "short": false,
+      "title": "CAN 2027 : six villes retenues en Afrique de l'Est",
+      "summary": "La CAF a dévoilé les six villes qui accueilleront la CAN 2027, organisée par trois pays : Tanzanie, Ouganda et Kenya.",
+      "body": [
+        "Lors de sa 48e Assemblée générale ordinaire, la CAF a dévoilé les six villes qui accueilleront la première Coupe d'Afrique organisée par trois pays. La Tanzanie accueillera Arusha, Dar es Salaam et Zanzibar. L'Ouganda accueillera Hoima et Kampala, et le Kenya accueillera Nairobi.",
+        "La compétition se déroulera du 19 juin au 17 juillet 2027 en Afrique de l'Est. Le message mis en avant tient en deux mots : Pamoja, ensemble."
+      ],
+      "rubrique": "sport",
+      "keywords": [
+        "CAN 2027",
+        "CAF",
+        "Tanzanie",
+        "Ouganda",
+        "Kenya"
+      ],
+      "enriched": "ai",
+      "indexable": true,
+      "slug": "can-2027-six-villes-retenues-en-afrique-de-l-est"
+    },
+    {
+      "id": "instagram_18133103707834586",
+      "date": "2026-11-21T13:55:31+0000",
+      "kind": "carousel",
+      "caption": "Petits extraits de nos coups de cœur visuels capturés à la Biennale de Dakar 2026. Une diversité de talents qui prouve encore une fois que l’art contemporain africain est au sommet de son expression. #biennaledakar2026 #senegal #art #artcomtemporain",
+      "sourceTitle": "",
+      "cover": "media/instagram_18133103707834586.jpg",
+      "sources": [
+        {
+          "network": "instagram",
+          "id": "18133103707834586",
+          "url": "https://www.instagram.com/p/DgAYviTjZgy/",
+          "embed": "https://www.instagram.com/p/DgAYviTjZgy/embed/",
+          "date": "2026-11-21T13:55:31+0000",
+          "ratio": "4/5"
+        }
+      ],
+      "aiv": 2,
+      "tries": 1,
+      "aiDone": true,
+      "short": true,
+      "title": "Biennale de Dakar 2026 : les coups de cœur visuels en images",
+      "summary": "Retour en images sur les coups de cœur visuels capturés à la Biennale de Dakar 2026, entre talents variés et art contemporain africain.",
+      "body": [
+        "Petits extraits de nos coups de cœur visuels capturés à la Biennale de Dakar 2026. Une diversité de talents qui prouve encore une fois que l’art contemporain africain est au sommet de son expression."
+      ],
+      "rubrique": "4-the-culture",
+      "keywords": [
+        "Biennale de Dakar 2026",
+        "art contemporain africain",
+        "Dakar",
+        "arts visuels",
+        "talents africains"
+      ],
+      "enriched": "ai",
+      "indexable": false,
+      "slug": "biennale-de-dakar-2026-les-coups-de-c-ur-visuels-en-images"
+    },
+    {
       "id": "instagram_18138164587708958",
       "date": "2026-11-20T14:09:59+0000",
       "kind": "video",
