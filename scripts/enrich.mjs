@@ -21,17 +21,28 @@ Règles absolues :
 Tu réponds uniquement avec un objet JSON :
 {"assez_de_matiere": true, "titre": "titre clair de 50 à 70 caractères, pensé pour la recherche Google", "resume": "une phrase de 140 caractères maximum", "paragraphes": ["2 ou 3 paragraphes, ${cfg.ai.min_words} à ${cfg.ai.max_words} mots au total"], "rubrique": "un identifiant de la liste fournie", "mots_cles": ["3 à 5 mots-clés"]}`;
 
+// Extrait l'objet JSON de la réponse. Le modèle réfléchit avant d'écrire : la réponse peut donc
+// commencer par un bloc de réflexion, et seul le texte des blocs "text" compte.
+export function readAnswer(data) {
+  const blocks = Array.isArray(data?.content) ? data.content : [];
+  const out = blocks.filter((b) => b.type === 'text').map((b) => b.text).join('');
+  const start = out.indexOf('{'), end = out.lastIndexOf('}');
+  if (start < 0 || end <= start) {
+    throw new Error(`réponse sans texte exploitable (arrêt : ${data?.stop_reason}, blocs : ${blocks.map((b) => b.type).join(', ') || 'aucun'})`);
+  }
+  return JSON.parse(out.slice(start, end + 1));
+}
+
 async function askAI(item) {
   const user = `Rubriques possibles (identifiant : nom) :\n${RUBS.map((r) => `${r.slug} : ${r.name}`).join('\n')}\n\nType de publication : ${item.kind}\nLégende :\n"""\n${item.caption}\n"""`;
   const r = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: { 'x-api-key': KEY, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
-    body: JSON.stringify({ model: cfg.ai.model, max_tokens: 1200, system: SYSTEM, messages: [{ role: 'user', content: user }] }),
+    body: JSON.stringify({ model: cfg.ai.model, max_tokens: 6000, system: SYSTEM, messages: [{ role: 'user', content: user }] }),
   });
   const text = await r.text();
   if (!r.ok) throw new Error(`HTTP ${r.status} : ${text.slice(0, 200)}`);
-  const out = JSON.parse(text).content?.[0]?.text || '';
-  return JSON.parse(out.slice(out.indexOf('{'), out.lastIndexOf('}') + 1));
+  return readAnswer(JSON.parse(text));
 }
 
 // Contrôles automatiques qui remplacent la relecture humaine. Renvoie la raison du rejet, ou null.
@@ -96,9 +107,10 @@ export async function run() {
 
     let result = null, mode = 'basic';
     if (KEY && wordCount(cleanCaption(item.caption)) >= 12) {
-      item.tries = (item.tries || 0) + 1;
       try {
         const out = await askAI(item);
+        // Seule une réponse réellement reçue compte comme un essai : une panne technique n'en consomme pas.
+        item.tries = (item.tries || 0) + 1;
         if (out.assez_de_matiere === false) {
           item.thin = true;
         } else {

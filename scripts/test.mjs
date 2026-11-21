@@ -80,6 +80,11 @@ assert.match(enricher.check({ ...ok, paragraphes: [LONG.replace('2021', '2019'),
 assert.match(enricher.check({ ...ok, paragraphes: [LONG + ' Selon Aminata, tout a changé.', ok.paragraphes[1]] }, LONG), /nom absent/);
 assert.match(enricher.check({ ...ok, rubrique: 'inventee' }, LONG), /rubrique/);
 
+// 3 bis. Lecture de la réponse du modèle : le texte peut suivre un bloc de réflexion.
+const answer = { stop_reason: 'end_turn', content: [{ type: 'thinking', thinking: '...' }, { type: 'text', text: 'Voici : {"titre": "Un titre", "rubrique": "cuisine"} ' }] };
+assert.deepEqual(enricher.readAnswer(answer), { titre: 'Un titre', rubrique: 'cuisine' });
+assert.throws(() => enricher.readAnswer({ stop_reason: 'max_tokens', content: [{ type: 'thinking', thinking: '...' }] }), /sans texte exploitable \(arrêt : max_tokens, blocs : thinking\)/);
+
 // 4. Génération du site.
 await builder.run();
 const home = await readFile(join(root, 'dist/index.html'), 'utf8');
