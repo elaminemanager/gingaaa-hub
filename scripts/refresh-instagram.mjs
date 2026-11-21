@@ -8,6 +8,10 @@ if (!token) {
   log('aucun jeton Instagram à prolonger');
   process.exit(0);
 }
+if (!token.startsWith('IG')) {
+  log('jeton Instagram sans expiration (connexion unifiée), rien à prolonger');
+  process.exit(0);
+}
 const r = await fetch(`https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=${token}`);
 const data = await r.json().catch(() => ({}));
 if (!r.ok || !data.access_token) {

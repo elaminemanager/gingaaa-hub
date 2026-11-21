@@ -43,17 +43,22 @@ const connectors = {
     }).filter((x) => x.id);
   },
 
-  // Instagram : jeton du compte professionnel (IG_ACCESS_TOKEN, connexion Instagram directe),
-  // ou à défaut jeton de la Page Facebook reliée (META_PAGE_TOKEN + IG_USER_ID).
+  // Instagram : un seul secret, IG_ACCESS_TOKEN. Le type de jeton décide du serveur interrogé :
+  //  - jeton "IG..." (ancienne connexion Instagram) : graph.instagram.com, compte désigné par /me ;
+  //  - jeton "EA..." (connexion unifiée de Meta, sans expiration) : graph.facebook.com, avec IG_USER_ID.
   async instagram() {
+    const token = env.IG_ACCESS_TOKEN || env.META_PAGE_TOKEN;
+    if (!token) return null;
     const fields = encodeURIComponent('id,caption,media_type,media_product_type,media_url,thumbnail_url,permalink,timestamp,children{media_type,media_url,thumbnail_url}');
     let res;
-    if (env.IG_ACCESS_TOKEN) {
-      res = await getJSON(`https://graph.instagram.com/me/media?fields=${fields}&limit=50&access_token=${env.IG_ACCESS_TOKEN}`);
+    if (token.startsWith('IG')) {
+      res = await getJSON(`https://graph.instagram.com/me/media?fields=${fields}&limit=50&access_token=${token}`);
     } else {
-      const token = env.META_PAGE_TOKEN, id = env.IG_USER_ID;
-      if (!token || !id) return null;
-      res = await getJSON(meta(`${id}/media?fields=${fields}&limit=50&access_token=${token}`));
+      if (!env.IG_USER_ID) {
+        if (!env.IG_ACCESS_TOKEN) return null;
+        throw new Error('identifiant du compte Instagram manquant (IG_USER_ID)');
+      }
+      res = await getJSON(meta(`${env.IG_USER_ID}/media?fields=${fields}&limit=50&access_token=${token}`));
     }
     return (res.data || []).map((m) => {
       const first = m.children?.data?.[0];

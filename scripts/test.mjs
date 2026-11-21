@@ -12,7 +12,7 @@ await cp(join(here, 'config.json'), join(root, 'config.json'));
 await cp(join(here, 'src'), join(root, 'src'), { recursive: true });
 process.env.HUB_ROOT = root;
 Object.assign(process.env, {
-  META_PAGE_TOKEN: 't', IG_ACCESS_TOKEN: 'igt', FB_PAGE_ID: '2', YOUTUBE_CHANNEL_ID: 'UCx',
+  META_PAGE_TOKEN: 't', IG_ACCESS_TOKEN: 'EAtest', IG_USER_ID: '1789', FB_PAGE_ID: '2', YOUTUBE_CHANNEL_ID: 'UCx',
   TIKTOK_CLIENT_KEY: 'k', TIKTOK_CLIENT_SECRET: 's', TIKTOK_REFRESH_TOKEN: 'r1', SITE_URL: 'https://test.example',
 });
 delete process.env.ANTHROPIC_API_KEY;
@@ -38,7 +38,8 @@ globalThis.fetch = async (url, opts = {}) => {
   url = String(url); calls.push(url);
   const json = (data) => new Response(JSON.stringify(data), { status: 200, headers: { 'content-type': 'application/json' } });
   if (url.includes('youtube.com/feeds')) return new Response(yt, { status: 200 });
-  if (url.startsWith('https://graph.instagram.com/me/media') && url.includes('access_token=igt')) return json({ data: ig });
+  if (url.startsWith('https://graph.facebook.com/1789/media') && url.includes('access_token=EAtest')) return json({ data: ig });
+  if (url.startsWith('https://graph.instagram.com/me/media') && url.includes('access_token=IGold')) return json({ data: ig });
   if (url.includes('/2/posts')) return json({ data: fb });
   if (url.includes('oauth/token')) return json({ access_token: 'a', refresh_token: 'r2' });
   if (url.includes('video/list')) { assert.equal(opts.headers.authorization, 'Bearer a'); return json({ data: { videos: tt } }); }
