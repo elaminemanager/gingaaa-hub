@@ -78,3 +78,12 @@ jobs:
           git add -A
           git commit -qm "Site du $(date -u +%Y-%m-%dT%H:%MZ)"
           git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" site
+
+      - name: Signaler une panne de connexion
+        if: always()
+        run: |
+          if [ -f .rotated/ERRORS ]; then
+            while IFS= read -r line; do echo "::error::$line"; done < .rotated/ERRORS
+            echo "Un compte relié n'a pas répondu : les nouvelles publications ne sont pas relayées."
+            exit 1
+          fi

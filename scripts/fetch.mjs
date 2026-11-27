@@ -230,4 +230,13 @@ export async function run({ only } = {}) {
   return { added, merged, removed, report };
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) await run();
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const { report } = await run();
+  // Un réseau configuré qui ne répond pas ne doit pas passer inaperçu : la panne est notée
+  // pour que la tâche automatique se termine en échec et que GitHub prévienne par e-mail.
+  const errors = report.filter((line) => line.includes(' : erreur '));
+  if (errors.length) {
+    await mkdir(p('.rotated'), { recursive: true });
+    await writeFile(p('.rotated/ERRORS'), errors.map((e) => e.slice(0, 300)).join('\n') + '\n');
+  }
+}
